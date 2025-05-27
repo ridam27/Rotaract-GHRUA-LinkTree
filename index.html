@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAC GHRUA Links</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <a href="https://instagram.com/rotaractclubghrua" target="_blank">
+            <img src="logo.png" alt="Profile" class="profile-img" />
+        </a>
+        <h1>Rotaract Club of GHRUA</h1>
+
+        <p class="info-msg"><i class="fas fa-exclamation-triangle"></i> Please read the bylaws first to unlock the
+            registration link.</p>
+
+        <div class="links">
+            <a href="https://instagram.com/rotaractclubghrua" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram Account
+            </a>
+            <a id="bylaws-link" href="Rotaract-Bylaws.pdf" target="_blank" onclick="markBylawsRead()">
+                <i class="fas fa-book-open"></i> Read Bylaws
+            </a>
+            <a id="register-link" href="#" target="_blank" class="disabled" onclick="handleRegisterClick(event)">
+                <i class="fas fa-user-check"></i> Register for Membership
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function markBylawsRead() {
+            localStorage.setItem("bylawsRead", "true");
+            const link = document.getElementById("register-link");
+            link.classList.remove("disabled");
+            link.href = "https://forms.gle/xXnbEuY7VgxMBvoM8";
+        }
+
+        function handleRegisterClick(event) {
+            const link = document.getElementById("register-link");
+            if (link.classList.contains("disabled")) {
+                event.preventDefault();
+                alert("Please read the bylaws before registering.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
