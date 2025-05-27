@@ -10,27 +10,37 @@
 </head>
 
 <body>
-    <div class="container">
-        <a href="https://instagram.com/rotaractclubghrua" target="_blank">
-            <img src="logo.png" alt="Profile" class="profile-img" />
-        </a>
-        <h1>Rotaract Club of GHRUA</h1>
-
-        <p class="info-msg"><i class="fas fa-exclamation-triangle"></i> Please read the bylaws first to unlock the
-            registration link.</p>
-
-        <div class="links">
+    <div class="wrapper">
+        <div class="container">
             <a href="https://instagram.com/rotaractclubghrua" target="_blank">
-                <i class="fab fa-instagram"></i> Instagram Account
+                <img src="logo.png" alt="Profile" class="profile-img" />
             </a>
-            <a id="bylaws-link" href="Rotaract-Bylaws.pdf" target="_blank" onclick="markBylawsRead()">
-                <i class="fas fa-book-open"></i> Read Bylaws
-            </a>
-            <a id="register-link" href="#" target="_blank" class="disabled" onclick="handleRegisterClick(event)">
-                <i class="fas fa-user-check"></i> Register for Membership
-            </a>
+            <h1>Rotaract Club of GHRUA</h1>
+
+            <p class="info-msg"><i class="fas fa-exclamation-triangle"></i> Please read the bylaws first to unlock the
+                registration link.</p>
+
+            <div class="links">
+                <a href="https://instagram.com/rotaractclubghrua" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram Account
+                </a>
+                <a id="bylaws-link" href="Rotaract-Bylaws.pdf" target="_blank" onclick="markBylawsRead()">
+                    <i class="fas fa-book-open"></i> Read Bylaws
+                </a>
+                <a id="register-link" href="#" target="_blank" class="disabled" onclick="handleRegisterClick(event)">
+                    <i class="fas fa-user-check"></i> Register for Membership
+                </a>
+            </div>
         </div>
+        
+        <footer class="footer">
+            <p>
+                Designed with ❤️ by
+                <a href="https://instagram.com/ridamsatkar27" target="_blank" class="insta-link">Ridam Satkar</a>
+            </p>
+        </footer>
     </div>
+
 
     <script>
         function markBylawsRead() {
